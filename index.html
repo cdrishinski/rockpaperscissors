@@ -6,7 +6,51 @@
   <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+  <div class="title">
+    <h1>A fun game of Rock, Paper, Scissors</h1>
+  </div>
+
+  <div class="middle">
+    <p></p>
+  </div>
+  
   <script type="text/javascript">
+
+    function playerSelection() {
+      let userChoice = prompt("Rock, Paper, or Scissors", "Rock");
+      console.log(userChoice);
+      return(userChoice);
+    }
+    
+    function computerSelection(computerPlay) {
+      computerPlay();
+      let computerChoice = computerPlay;
+      console.log(computerChoice);
+      return(computerChoice);
+
+    
+    function computerPlay (){
+      let options = ["Rock", "Paper", "Scissors"];
+      let optionSelected = options[Math.floor(Math.random() * options.length)];
+      return(optionSelected);
+    }}
+
+    // function game (playerSelection, computerSelection) {
+      playerSelection();
+      computerSelection();
+      alert(`Players selected${playerSelection}`)
+      alert(`Computer selected ${computerSelection}`)
+      if((playerSelection = "Rock") && (computerSelection = "Scissors")){
+        alert ("Player wins!");
+      } else if((playerSelection = "Paper") && (computerSelection = "Rock")){
+        alert ("Player wins!");
+      } else if ((playerSelection = "Scissors") && (computerSelection = "Paper")){
+        alert ("Player wins!");
+      } else {
+        alert("Computer Wins")
+      }
+    // }
+    // game()
     
   </script>
 
